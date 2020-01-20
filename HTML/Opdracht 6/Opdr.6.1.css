@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    padding: 30px;
+}
+form {
+    display: grid;
+}
+.wachtwoord {
+    display: flex;
+}
+input {
+    width: 300px;
+}
+.verzend {
+    width: 200px;
+}
+

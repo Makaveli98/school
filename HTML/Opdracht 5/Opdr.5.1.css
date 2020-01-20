@@ -1,0 +1,61 @@
+html {
+    background-color: white;
+    padding: 10px;
+    height: 1500px;
+    width: 900px;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+nav {
+    background: floralwhite;
+    list-style: none;
+    padding: 20px 0;
+}
+nav  li {
+    display: inline-block;
+    padding: 10px;
+}
+nav  li  a {
+    text-decoration: none;
+    color: black;
+}
+nav li  a:hover {
+    color: red;
+}
+.FanArt {
+    height: 450px;
+    width: 600px;
+}
+.YoungNaruto {
+    height: 150px;
+    width: 300px;
+    position: absolute;
+    top: 201px;
+    left: 640px;
+
+}
+.SageMode {
+    height: 150px;
+    width: 300px;
+    position: absolute;
+    top: 350px;
+    left: 640px;
+}
+.Naruto\&Boruto {
+    height: 150px;
+    width: 300px;
+    position: absolute;
+    top: 500px;
+    left: 640px;
+}
+.watspoppin{
+    position: absolute;
+    top: 650px;
+    right: 550px;
+}
+.Boruto {
+    position: absolute;
+    top: 1000px;
+}

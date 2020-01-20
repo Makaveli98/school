@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        div.animepictures {
+            box-sizing: border-box;
+            height: 450px;
+            width: 300px;
+            float: left;
+            border: solid 1px black;
+        }
+        div.favorite {
+            height: 150px;
+            width: 300px;
+            background-image: none;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        #anime {
+            width: 900px;
+            height: 1350px;
+            border: solid 1px black;
+            font-size: 0px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<div id="anime"></div>
+
+<script>
+     pics = document.getElementById("anime");
+     createPicsHolder();
+     createImages();
+
+     function createPicsHolder() {
+
+         for (var i = 0; i <9 ; i++) {
+
+         pictureHolder = document.createElement("div");
+         pictureHolder.className = "animepictures";
+         pictureHolder.id = "picture-holder" + i;
+         pics.appendChild(pictureHolder);
+         }
+
+     }
+
+     function createImages() {
+
+
+         pictureHolders = document.getElementsByClassName("animepictures");
+         for (var i = 0; i <pictureHolders.length ; i++) {
+             favorite = document.createElement("div");
+             favorite.className = "favorite";
+             favorite.id = "favorite" + (i+1);
+             image1 = document.createElement("img");
+             image1.src = "../image4/Anime" + (i+1) + ".jpg";
+             image1.id = (i+1);
+             image1.addEventListener("click", function () {
+                 makeFavorite(this.id);
+             });
+             pictureHolders[i].appendChild(favorite);
+             pictureHolders[i].appendChild(image1);
+         }
+
+     }
+
+     function makeFavorite(id) {
+
+         notFavorite = document.getElementsByClassName("favorite");
+         for (var i = 0; i <notFavorite.length ; i++) {
+             notFavorite[i].style.backgroundImage = "none";
+
+         }
+         favorite = document.getElementById("favorite" + id);
+         favorite.style.backgroundImage = "url('../image5/hearttt.jpg')";
+         console.log("favo..." + id);
+
+
+
+     }
+
+
+</script>
+
+</body>
+</html>

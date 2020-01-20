@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    var myCar = {
+        color: "red",
+        brand: "rolls royce",
+        speed: 0,
+
+        gas: function () {
+            this.speed += 10;
+            console.log(this.speed);
+        },
+
+        honk: function () {
+            console.log("honk");
+
+        }
+
+
+        };
+    console.log(myCar.speed);
+    myCar.gas();
+    myCar.gas();
+    myCar.gas();
+    myCar.gas();
+    myCar.gas();
+    console.log(myCar.honk());
+
+
+</script>
+
+</body>
+</html>

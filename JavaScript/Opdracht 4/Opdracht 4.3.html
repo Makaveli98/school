@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html {
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+        }
+        body {
+            font-family: 'Copse', serif;
+            text-align: center;
+        }
+        #slideHolder1 {
+            width: 300px;
+            height: 250px;
+            border: solid 3px black;
+            font-size: 0px;
+            margin:auto;
+        }
+        #slideHolder2 {
+            width: 300px;
+            height: 250px;
+            border: solid 3px black;
+            font-size: 0px;
+            margin:auto;
+        }
+        #slideHolder3 {
+            width: 300px;
+            height: 250px;
+            border: solid 3px black;
+            font-size: 0px;
+            margin:auto;
+        }
+    </style>
+    </head>
+<body>
+
+
+<div id="slideHolder1"></div>
+<script>
+    // var images1 = [1,2,3,4,5,6];
+    var teller1 = 1;
+    var teller2 = 1;
+    var teller3 = 1;
+    var slideHolder1 = document.getElementById("slideHolder1");
+    slideHolder1.style.backgroundImage = "url('../image1/Anime1(resized).jpg')";
+
+    slideHolder1.addEventListener("click", function () {
+        teller1 = getImage(teller1);
+        slideHolder1.style.backgroundImage = "url('../image1/Anime" + teller1 + "(resized).jpg')";
+    });
+
+    function getImage (teller) {
+        if (teller >= 6) {
+            teller = 1;
+        } else {
+            teller++;
+        }
+        return teller;
+    }
+</script>
+
+
+<div id="slideHolder2"></div>
+<script>
+
+    var slideHolder2 = document.getElementById("slideHolder2");
+    slideHolder2.style.backgroundImage = "url('../image2/Anime1(resized).jpg')";
+
+    slideHolder2.addEventListener("click", function () {
+        teller2 = getImage(teller2);
+        slideHolder2.style.backgroundImage = "url('../image2/Anime" + teller2 + "(resized).jpg')";
+    });
+
+
+</script>
+
+
+<div id="slideHolder3"></div>
+<script>
+    var slideHolder3 = document.getElementById("slideHolder3");
+    slideHolder3.style.backgroundImage = "url('../image3/Anime1(resized).jpg')";
+
+    slideHolder3.addEventListener("click", function () {
+        teller3 = getImage(teller3);
+        slideHolder3.style.backgroundImage = "url('../image3/Anime" + teller3 + "(resized).jpg')";
+    });
+
+</script>
+
+</body>
+</html>

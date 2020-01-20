@@ -1,0 +1,12 @@
+body{
+    padding: 20px;
+}
+header{
+    margin-bottom: 30px;
+}
+section{
+    border: solid black 1px;
+}
+footer{
+    padding: 20px;
+}
