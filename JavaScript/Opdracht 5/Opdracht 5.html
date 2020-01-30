@@ -15,7 +15,6 @@
         div.favorite {
             height: 150px;
             width: 300px;
-            background-image: none;
             background-repeat: no-repeat;
             background-position: center;
         }
@@ -33,22 +32,18 @@
 
 <script>
      pics = document.getElementById("anime");
-     createPicsHolder();
      createImages();
 
-     function createPicsHolder() {
+
+     function createImages() {
 
          for (var i = 0; i <9 ; i++) {
 
-         pictureHolder = document.createElement("div");
-         pictureHolder.className = "animepictures";
-         pictureHolder.id = "picture-holder" + i;
-         pics.appendChild(pictureHolder);
+             pictureHolder = document.createElement("div");
+             pictureHolder.className = "animepictures";
+             pictureHolder.id = "picture-holder" + i;
+             pics.appendChild(pictureHolder);
          }
-
-     }
-
-     function createImages() {
 
 
          pictureHolders = document.getElementsByClassName("animepictures");
